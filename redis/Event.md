@@ -1,9 +1,9 @@
 # Event
 ## Key Source File
-   (1) ae.h ae.c
-       These source files contains some abstract interfaces in order to operate different IO multiplexing mechanism in different operating system. For example, epoll in Linux, Event ports in Solaris, kqueue in FreeBSD and so forth.
-   (2) ae_epoll.c ae_evport.c ae_kqueue.c ae_select.c
-       These source files contains specific IO multiplexing mechanism.
+   (1) ae.h ae.c  
+       These source files contains some abstract interfaces in order to operate different IO multiplexing mechanism in different operating system. For example, epoll in Linux, Event ports in Solaris, kqueue in FreeBSD and so forth.  
+   (2) ae_epoll.c ae_evport.c ae_kqueue.c ae_select.c  
+       These source files contains specific IO multiplexing mechanism.  
 ## Abstract Interfaces
 ### Create Event Loop
     eEventLoop *aeCreateEventLoop(int setsize);
