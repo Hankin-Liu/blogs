@@ -19,4 +19,4 @@
 
 
 
-[<font color=#00ffff size=72>Back</font>](https://github.com/Hankin-Liu/hankin.github.io/blob/master/README.md)
+[\[Back</font>\]](https://github.com/Hankin-Liu/hankin.github.io/blob/master/README.md)
