@@ -2,7 +2,7 @@
 ## Key Source File
 1. networking.c  
     This file contains functions to process client requirements.  
-2. server.c
+2. server.c  
     This file contains functions to process commands.
 ## Read From Socket and Run
 1. read data from socket and process data  
@@ -20,13 +20,13 @@
     Called By : （2），line:1505(MASTER), line:1508(SLAVE)  
 4. parse input command and save result into argc and argv of client object  
     (1) inline protocol  
-        Source File : networking.c  
-        Function : int processInlineBuffer(client *c)  
-        Called By : step 3, line:1458  
+            Source File : networking.c  
+            Function : int processInlineBuffer(client *c)  
+            Called By : step 3, line:1458  
     (2) RESP protocol  
-        Source File : networking.c  
-        Function : int processMultibulkBuffer(client *c)  
-        Called By : step 3, line:1460  
+            Source File : networking.c  
+            Function : int processMultibulkBuffer(client *c)  
+            Called By : step 3, line:1460  
 5. process command  
     Source File : server.c  
     Function : int processCommand(client *c)  
