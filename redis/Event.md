@@ -1,5 +1,5 @@
 # Event
-Before reading this article, you must know what is IO multiplexing and the specific IO multiplexing mechanism such as epoll, select.
+Before reading this article, you must know what is IO multiplexing mechanism and the specific IO multiplexing mechanism such as epoll, select.
 ## Key Source File
 1. ae.h ae.c  
     These source files contain some abstract interfaces in order to operate different IO multiplexing mechanism in different operating system. For example, epoll in Linux, Event ports in Solaris, kqueue in FreeBSD and so forth.  
