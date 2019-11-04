@@ -17,7 +17,7 @@
 3. wrapper for processing data  
     Source File : networking.c  
     Function : void processInputBuffer(client *c)  
-    Called By : （2），line:1505(MASTER), line:1508(SLAVE)  
+    Called By : step 2，line:1505(MASTER), line:1508(SLAVE)  
 4. parse input command and save result into argc and argv of client object  
     (1) inline protocol  
             Source File : networking.c  
@@ -38,7 +38,7 @@
 7. execute command  
     Source File : server.c  
     Function : void call(client *c, int flags)  
-    Called By : （5），line:2733  
+    Called By : step 5，line:2733  
     Note : proc is a function pointer of command execution, it means run the command. Line:2439, c->cmd->proc(c);  
   
 
