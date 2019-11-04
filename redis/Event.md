@@ -44,5 +44,5 @@ Before reading this article, you must know what is IO multiplexing mechanism and
 ### Wait For Events Or Timeout
     static int aeApiPoll(aeEventLoop *eventLoop, struct timeval *tvp)  
 
-[Back](https://github.com/Hankin-Liu/hankin.github.io/blob/master/redis/Redis_Analysis.md)
+[\[Back\]](https://github.com/Hankin-Liu/hankin.github.io/blob/master/redis/Redis_Analysis.md)
 

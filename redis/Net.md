@@ -55,7 +55,7 @@ When TCP client connects, callback function acceptTcpHandler will be called. Whe
     Note : register a callback function into event loop, when client’s command comes, event loop will call this function. Callback Function : void readQueryFromClient(aeEventLoop *el, int fd, void *privdata, int mask), which is in file networking.c.  
     Called By : step 3，line: 98  
 
-[Back](https://github.com/Hankin-Liu/hankin.github.io/blob/master/redis/Redis_Analysis.md)
+[\[Back\]](https://github.com/Hankin-Liu/hankin.github.io/blob/master/redis/Redis_Analysis.md)
 
 
 
