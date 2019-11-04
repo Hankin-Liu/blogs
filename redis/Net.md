@@ -31,7 +31,7 @@
     Function : void aeMain(aeEventLoop *eventLoop)  
     Called By : step 1，line:4200  
 ## Process Client’s Connection
-When TCP client connects, callback function acceptTcpHandler will be called. When unix domain socket client connects, callback function acceptUnixHandler will be called. They contains below steps(key steps, not all steps).  
+When TCP client connects, callback function acceptTcpHandler will be called. When unix domain socket client connects, callback function acceptUnixHandler will be called. They contain below steps(key steps, not all steps).  
 1. accept connections  
     (1) TCP client  
         Source File : anet.c  
