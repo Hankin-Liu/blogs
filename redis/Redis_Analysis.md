@@ -14,7 +14,7 @@
    
    [Fetch Command and Run](https://github.com/Hankin-Liu/hankin.github.io/blob/master/redis/Process_Command.md)
    
-
+   [High Avaliablility](https://github.com/Hankin-Liu/hankin.github.io/blob/master/redis/High_Avaliablility.md)
 
 
 
