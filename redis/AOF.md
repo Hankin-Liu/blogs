@@ -16,7 +16,7 @@
     Source File : aof.c  
 	Function : sds catAppendOnlyGenericCommand(sds dst, int argc, robj **argv)  
     Called By : step 2, line:627  
-4. cat command which has been translated to server's buffer(global variable) 
+4. cat command which has been translated to server's buffer(global variable)  
     Source File : sds.c  
 	Function : sds sdscatlen(sds s, const void *t, size_t len)  
     Called By : step 2, line:634   
