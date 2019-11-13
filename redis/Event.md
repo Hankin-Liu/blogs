@@ -6,7 +6,7 @@ Before reading this article, you must know what is IO multiplexing mechanism and
 2. ae_epoll.c ae_evport.c ae_kqueue.c ae_select.c  
     These source files contain specific IO multiplexing mechanism.  
 ## Abstract Interfaces
-The implementation of these interfaces depends on the multiplexing layer supported by this system. For example:  
+The implementation of these interfaces depends on the multiplexing layer supported by this system. The following are ordered by performance, descending.  
 (1) First, check event port. Event port will be used if it is supported by system. #include "ae_evport.c"  
 (2) Second, check epoll. Epoll will be used if it is supported by system. #include "ae_epoll.c"  
 (3) Third, check kqueue. Kqueue will be used if it is supported by system. #include "ae_kqueue.c"  
