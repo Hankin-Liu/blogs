@@ -4,54 +4,54 @@ Refer to gcc official doc, compiler memory fence can flush registers. The follow
 [gcc doc page](https://gcc.gnu.org/onlinedocs/gcc/Extended-Asm.html#Clobbers-and-Scratch-Registers)
 
 ## Example
-Operating System : Linux
-Gcc Version : 4.8.5
-Compile Command : g++ test.cpp -o test -O2 -pthread -std=c++11 -g
+Operating System : Linux  
+Gcc Version : 4.8.5  
+Compile Command : g++ test.cpp -o test -O2 -pthread -std=c++11 -g  
 
-#include <iostream>
-#include <mutex>
-#include <thread>
-#include <vector>
-#include <unistd.h>
-#include <atomic>
-using namespace std;
+#include <iostream>  
+#include <mutex>  
+#include <thread>  
+#include <vector>  
+#include <unistd.h>  
+#include <atomic>  
+using namespace std;  
 
-class temp
-{
-    public:
-	    void run()
-		{
-		    while (true) {
-			    // if uncommented below fence, program will exit normally. Otherwise, program will go to endless loop.
-			    //std::atomic_thread_fence(std::memory_order_relaxed);
-				if (! v.empty()) {
-				    {
-					    std::lock_guard<std::mutex> temp_mtx(mtx_);
-						cout << "value : " << v[0] << endl;
-						v.clear();
-					}
-					break;
-				}
-			}
-		}
-	public:
-	    std::mutex_;
-		vector<uint32_t> v;
-};
+class temp  
+{  
+    public:  
+	    void run()  
+		{  
+		    while (true) {  
+			    // if uncommented below fence, program will exit normally. Otherwise, program will go to endless loop.  
+			    //std::atomic_thread_fence(std::memory_order_relaxed);  
+				if (! v.empty()) {  
+				    {  
+					    std::lock_guard<std::mutex> temp_mtx(mtx_);  
+						cout << "value : " << v[0] << endl;  
+						v.clear();  
+					}  
+					break;  
+				}  
+			}  
+		}  
+	public:  
+	    std::mutex_;  
+		vector<uint32_t> v;  
+};  
 
-temp t;
+temp t;  
 
-void thread1()
-{
-    sleep(5);
-	std::lock_guard<std::mutex> temp_mtx(mtx_);
-	t.v.push_back(1);
-}
+void thread1()  
+{  
+    sleep(5);  
+	std::lock_guard<std::mutex> temp_mtx(mtx_);  
+	t.v.push_back(1);  
+}  
 
-int main()
-{
-    std::thread t1(thread1);
-	t.run();
-	t1.join();
-	return 0;
-}
+int main()  
+{  
+    std::thread t1(thread1);  
+	t.run();  
+	t1.join();  
+	return 0;  
+}  
