@@ -56,5 +56,5 @@ int main()
 	t1.join();  
 	return 0;  
 }  
-
+```
 [\[Back\]](https://github.com/Hankin-Liu/hankin.github.io/blob/master/gcc/Gcc.md)
