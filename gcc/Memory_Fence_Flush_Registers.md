@@ -8,6 +8,7 @@ Operating System : Linux
 Gcc Version : 4.8.5  
 Compile Command : g++ test.cpp -o test -O2 -pthread -std=c++11 -g  
 
+```c++
 #include <iostream>  
 #include <mutex>  
 #include <thread>  
