@@ -20,8 +20,11 @@
     Source File : sds.c  
 	Function : sds sdscatlen(sds s, const void *t, size_t len)  
     Called By : step 2, line:634   
-
-
+5. Waiting for flushing server's buffer data to disk  
+    Source File : aof.c  
+	Function : void flushAppendOnlyFile(int force)
+	Called By : (1) line:1403(server.c) in function void before_sleep(sturct aeEventLoop *eventLoop), this function has registered into eventLoop(server.c line 4198) and will be called before sleep.  
+                (2) line:1301,1309(server.c) in function int serverCron(struct aeEventLoop *eventLoop, long long id, void *clientData), this function will be called by timer, and it is registered at line:2128(server.c) in function void initServer(void)  
 
 
 [\[Back\]](https://github.com/Hankin-Liu/hankin.github.io/blob/master/redis/High_Avaliablility.md)
