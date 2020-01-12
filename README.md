@@ -3,4 +3,4 @@
 ## blogs
 [Redis Analysis](https://github.com/Hankin-Liu/hankin.github.io/blob/master/redis/Redis_Analysis.md)
 
-[GCC Knowledge](https://github.com/Hankin-Liu/hankin.github.io/blob/master/gcc/Gcc.md)
+[Concurrency Knowledge](https://github.com/Hankin-Liu/hankin.github.io/blob/master/concurrency/Gcc.md)
