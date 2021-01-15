@@ -42,5 +42,5 @@ Step 2: After running for 10 seconds, use CTRL + C to exit this program. Now you
              callgrind.out.115774  test  test.cpp  
 Step 3: Use kcachegrind to open and analyze this profile file.  
         Instruction: kcachegrind  
-![valgrind+kcachegrind](./valgrind.png)  
+![valgrind+kcachegrind](https://github.com/Hankin-Liu/blogs/blob/master/performance_optimization/valgrind.png)  
 
