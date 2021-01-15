@@ -38,7 +38,9 @@ The first tool is valgrind, let us use valgrind to profile our code which is sho
 Step 1: Run program using valgrind  
         Instruction: valgrind --tool=callgrind --trace-children=yes --dump-instr=yes --collect-jumps=yes --collect-systime=no --branch-sim=yes --simulate-cache=yes ./test >/dev/null 2>&1  
 Step 2: After running for 10 seconds, use CTRL + C to exit this program. Now you can find a callgrind.out file in your working directory. For example:   
-    [hankin@localhost test]$ ls  
-    callgrind.out.115774  test  test.cpp  
+             [hankin@localhost test]$ ls  
+             callgrind.out.115774  test  test.cpp  
 Step 3: Use kcachegrind to open and analyze this profile file.  
         Instruction: kcachegrind  
+![valgrind+kcachegrind](./valgrind.png)  
+
