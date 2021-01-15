@@ -78,3 +78,5 @@ The second tool is Gperftools, let us use it to profile our code which is shown 
 From the picture, we can see that func1 calls func2 and func3 and std::ostream::flush, the time consuming proportion of func2 is 22.52% + 51.52%, and the time consuming proportion of  func3 is 7.54% + 17.85%. So the func2 is the biggest performance bottleneck.
 
 There is a little difference between the result of valgrind and gperftools. In the result of gperftools, func1 calls std::ostream::flush, but in the result of valgrind, it doesn't happen. I guess program running on valgrind maybe has a little difference because valgrind provides a virtual environment for programs to run.  
+
+[\[Back\]](https://github.com/Hankin-Liu/hankin.github.io/blob/master/performance_optimization/performance_optimization.md)
