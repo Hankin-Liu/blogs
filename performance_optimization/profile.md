@@ -33,14 +33,16 @@ int main()
 Operating System : Linux  
 Gcc Version : 9.3.1  
 Compile Command : g++ test.cpp -o test -O2 -g  
+
 ## valgrind + kcachegrind  
 The first tool is valgrind, let us use valgrind to profile our code which is shown above.  
-Step 1: Run program using valgrind  
+**Step 1:** Run program using valgrind  
         Instruction: valgrind --tool=callgrind --trace-children=yes --dump-instr=yes --collect-jumps=yes --collect-systime=no --branch-sim=yes --simulate-cache=yes ./test >/dev/null 2>&1  
-Step 2: After running for 10 seconds, use CTRL + C to exit this program. Now you can find a callgrind.out file in your working directory. For example:   
+**Step 2:** After running for 10 seconds, use CTRL + C to exit this program. Now you can find a callgrind.out file in your working directory. For example:   
              [hankin@localhost test]$ ls  
              callgrind.out.115774  test  test.cpp  
-Step 3: Use kcachegrind to open and analyze this profile file.  
+**Step 3:** Use kcachegrind to open and analyze this profile file.  
         Instruction: kcachegrind  
 ![valgrind+kcachegrind](https://github.com/Hankin-Liu/blogs/blob/master/performance_optimization/valgrind.png)  
 
+From the picture, we can see that func1 calls func2 and func3, the time consuming proportion of func2 is 74.82%, and the time consuming proportion of  func3 is 24.78%. So the func2 is the biggest performance bottleneck.
