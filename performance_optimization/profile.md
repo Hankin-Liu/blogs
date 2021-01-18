@@ -55,8 +55,8 @@ The second tool is Gperftools, let us use it to profile our code which is shown 
 **Step 2:** send signal 12 to this process to start profiling  
              Instruction: kill -12 PID  
 
-​             Note: PID is the pid of this program. 
-**Step 3:** After 10 seconds,  send signal 12 to this process to stop profiling, Now you can find a file named prof.out.0 in your working directory. For example
+​             Note: PID is the pid of this program.  
+**Step 3:** After 10 seconds,  send signal 12 to this process to stop profiling, Now you can find a file named prof.out.0 in your working directory. For example  
 ​             [hankin@localhost test]$ ls  
 
 ​             prof.out.0  test  test.cpp
