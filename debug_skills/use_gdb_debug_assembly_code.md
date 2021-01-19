@@ -97,8 +97,9 @@ From this picture, we can see that the assembly code is moving the return value 
 | return value            | rax      |
 
 
-## Reference:  
+## References  
 (1) AMD64 official document chapter 3.2.3 [x86-64-ABI-master](https://github.com/hjl-tools/x86-psABI/wiki/x86-64-psABI-1.0.pdf). [gitlab link](https://gitlab.com/x86-psABIs/x86-64-ABI).  
 (2) Article of Agner Fog (2010-02-16) chapter 7 [Calling conventions for different C++ compilers and operating systems](http://agner.org/optimize/calling_conventions.pdf).  
+(3) [x86 calling conventions](https://en.wikipedia.org/wiki/X86_calling_conventions#List_of_x86_calling_conventions).  
 
 [\[Back\]](https://github.com/Hankin-Liu/hankin.github.io/blob/master/debug_skills/debug_skills.md)
