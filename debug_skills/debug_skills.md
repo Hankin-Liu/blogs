@@ -2,6 +2,6 @@
 
 [Debug Assembly Code Using Gdb](https://github.com/Hankin-Liu/hankin.github.io/blob/master/debug_skills/use_gdb_debug_assembly_code.md)  
 
-[Strip and Add Debug Info for ELF File](https://github.com/Hankin-Liu/hankin.github.io/blob/master/debug_skills/strip_add_add_debug_info.md)  
+[Strip and Add Debug Info for ELF File](https://github.com/Hankin-Liu/hankin.github.io/blob/master/debug_skills/strip_and_add_debug_info.md)  
 
 [\[Back</font>\]](https://github.com/Hankin-Liu/hankin.github.io/blob/master/README.md)
