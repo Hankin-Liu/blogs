@@ -39,7 +39,7 @@ total 112
 -rwxr-xr-x. 1 root root 110264 Jan 27 09:14 /usr/local/bin/test
 ```
 
-**Step 3:** now, when we debug this ELF file using gdb, there will be source code.
+**Step 3:** now, when we debug this ELF file using gdb, there will be no source code.
 
 ​              Instruction: (1) cd /usr/local/bin
 
