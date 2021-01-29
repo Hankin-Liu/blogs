@@ -58,13 +58,13 @@ Compile Command : g++ test.cpp -o test -O2 -pthread -std=c++11 -g
 ```
 ## Analyze the assembly code
 
-Let us use below command to disassembe the binary file and compair the above C++ code in two cases. **Case 1**: uncomment line 17. **Case 2**: comment line 17.
+Let us use below command to disassemble the binary file and compare the above C++ code in two cases. **Case 1**: uncomment line 17. **Case 2**: comment line 17.
 
 **Instruction**: (1) objdump -S -mi386:x86-64:intel -d test > test_comment.asm
 
 ​                       (2) uncomment line 17 and compile again
 
-​                       (3) objdump -S -mi386:x86-64:intel -d test > test_comment.asm
+​                       (3) objdump -S -mi386:x86-64:intel -d test > test_uncomment.asm
 
 ### STL knowledge
 
@@ -144,11 +144,11 @@ From the assembly code, let us see what is done before checking v.empty(). let u
 
 line 224: load vector v.\_M_impl.\_M_start from memory to register rax
 
-line 227: compair register rax and vector v.\_M_impl.\_M_finish
+line 227: compare register rax and vector v.\_M_impl.\_M_finish from memory
 
 line 228: if same, go to line 227, else go to line 230
 
-We can see that every time the comparision is between register rax and memory(vector v.\_M_impl.\_M_finish). So when thread 1 modifies this memory in line 38 in C++ code above, register rax will not be equal to the new value. Then the program will go to the else branch.
+We can see that every time the comparision is between register rax and memory(vector v.\_M_impl.\_M_finish). So when thread 1 modifies this memory in line 38 in C++ code above, register rax will not be equal to the new value in memory. Then the program will go to the else branch.
 
 ### Case 2
 
@@ -192,7 +192,7 @@ line 229: load vector v.\_M_impl.\_M_start from memory to register rdx
 
 line 230: load vector v.\_M_impl.\_M_finish from memory to register rax
 
-line 233: compair register rax and  register rax
+line 233: compare register rdx and register rax
 
 line 234: if same, go to line 233, else go to line 236
 
