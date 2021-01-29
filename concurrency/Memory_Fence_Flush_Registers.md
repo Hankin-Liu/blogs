@@ -218,7 +218,7 @@ Instruction: (1) gdb -tui test
 
 ​                     (8) p	v.\_M_impl._M_start
 
-![endless loop_by_O2](https://github.com/Hankin-Liu/hankin.github.io/blob/master/concurrency/endless_loopby_O2.png
+![endless loop_by_O2](https://github.com/Hankin-Liu/hankin.github.io/blob/master/concurrency/endless_loop_by_O2.png
 
 
 
