@@ -67,9 +67,9 @@ Compile Command : g++ test.cpp -o test -O2 -g
 
 ![check_parameter_from_register](https://github.com/Hankin-Liu/hankin.github.io/blob/master/debug_skills/check_parameter_from_register.png)
 
-From this picture, we can see that the assembly code is moving parameter into register in order to call function func2. The relationship between parameter and registers are shown below:
+From this picture, we can see that the assembly code is moving INTEGER parameter into register in order to call function func2. The relationship between INTEGER parameter and registers are shown below:
 
-| parameter            | register |
+| INTEGER parameter            | register |
 | -------------------- | -------- |
 | The 1st parameter p1 | rdi      |
 | the 2nd parameter P2 | rsi      |
@@ -92,7 +92,7 @@ From this picture, we can see that the assembly code is moving parameter into re
 
 From this picture, we can see that the assembly code is moving the return value of func2 into register in order to return value from func2. The relationship between function's return value and registers are shown below:
 
-| function's return value | register |
+| function's INTEGER return value| register |
 | ----------------------- | -------- |
 | return value            | rax      |
 
