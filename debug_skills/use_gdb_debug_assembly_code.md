@@ -90,7 +90,7 @@ From this picture, we can see that the assembly code is moving INTEGER parameter
 
 ![check_return_value_from_register](https://github.com/Hankin-Liu/hankin.github.io/blob/master/debug_skills/check_return_value_from_register.png)
 
-From this picture, we can see that the assembly code is moving the return value of func2 into register in order to return value from func2. The relationship between function's return value and registers are shown below:
+From this picture, we can see that the assembly code is moving the INTEGER return value of func2 into register in order to return INTEGER value from func2. The relationship between function's INTEGER return value and registers are shown below:
 
 | function's INTEGER return value| register |
 | ----------------------- | -------- |
