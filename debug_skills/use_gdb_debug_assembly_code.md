@@ -97,10 +97,10 @@ From this picture, we can see that the assembly code is moving the INTEGER retur
 | return value            | rax      |
 
 ## Extension
-We have talked about how to check the register for INTEGER parameters and return value. How about floating point data or customized structure? 
-(1) For floating point data, register xmm0 - xmm7 are used to pass floating argument to function. xmm0 - xmm1 are used to return floating point argument.
-(2) For customized structure, if it is larger than 8 bytes, it will be passed by stack.
-(3) For further study, you can get more information and details from the reference document(x86-64-ABI-master).
+We have talked about how to check the register for INTEGER parameters and return value. How about floating point data or customized structure?   
+(1) For floating point data, register xmm0 - xmm7 are used to pass floating argument to function. xmm0 - xmm1 are used to return floating point argument.  
+(2) For customized structure, if it is larger than 8 bytes, it will be passed by stack.  
+(3) For further study, you can get more information and details from the reference document(x86-64-ABI-master).  
 
 ## References  
 (1) AMD64 official document chapter 3.2.3 [x86-64-ABI-master](https://github.com/hjl-tools/x86-psABI/wiki/x86-64-psABI-1.0.pdf). [gitlab link](https://gitlab.com/x86-psABIs/x86-64-ABI).  
