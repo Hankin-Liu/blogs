@@ -77,6 +77,7 @@ From this picture, we can see that the assembly code is moving INTEGER parameter
 | the 4th parameter P4 | rcx      |
 | the 5th parameter P5 | r8       |
 | the 6th parameter P6 | r9       |
+Note: If the return type is larger than 8 bytes, rdi will be used to store the return value.
 
 **Step 4:** create a breakpoint at line 16 of func2 and check the return value of func2
 
