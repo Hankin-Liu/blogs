@@ -13,6 +13,9 @@ Command: netstat -i
 (2) ifconfig  
 Command: ifconfig
 ![ifconfig_ringbuff_full](https://github.com/Hankin-Liu/blogs/blob/master/performance_optimization/ifconfig_ring_buffer_full.png)
+(3) sar  
+Command: sar -n EDEV 1  
+![sar_ringbuff_full](https://github.com/Hankin-Liu/blogs/blob/master/performance_optimization/sar_ring_buffer_full.png)  
 ### 2. NIC fifo is full
 In this scenario, network data can not be stored into NIC fifo, then the package will be dropped.  
 Let's locate this issue using below tools：  
@@ -23,6 +26,7 @@ Command: netstat -i
 Command: ifconfig
 ![ifconfig_fifo_full](https://github.com/Hankin-Liu/blogs/blob/master/performance_optimization/ifconfig_fifo_full.png)  
 (3) sar  
-Command:   
+Command: sar -n EDEV 1  
+![sar_fifo_full](https://github.com/Hankin-Liu/blogs/blob/master/performance_optimization/sar_fifo_full.png)  
 
 [\[Back\]](https://github.com/Hankin-Liu/hankin.github.io/blob/master/performance_optimization/performance_optimization.md)
