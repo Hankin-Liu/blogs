@@ -10,10 +10,10 @@ In this scenario, DMA can not copy data into ring buffers, then the packages wil
 Let's locate this issue using below tools：  
 (1) netstat  
 Command: netstat -i  
-![netstat_ringbuff_full](https://github.com/Hankin-Liu/blogs/blob/master/performance_optimization/resources/package_loss/netstat_ring_buffer_full.png)
+![netstat_ringbuff_full](https://github.com/Hankin-Liu/blogs/blob/master/performance_optimization/resources/package_loss/netstat_ring_buffer_full.png)  
 (2) ifconfig  
-Command: ifconfig
-![ifconfig_ringbuff_full](https://github.com/Hankin-Liu/blogs/blob/master/performance_optimization/resources/package_loss/ifconfig_ring_buffer_full.png)
+Command: ifconfig  
+![ifconfig_ringbuff_full](https://github.com/Hankin-Liu/blogs/blob/master/performance_optimization/resources/package_loss/ifconfig_ring_buffer_full.png)  
 (3) sar  
 Command: sar -n EDEV 1  
 ![sar_ringbuff_full](https://github.com/Hankin-Liu/blogs/blob/master/performance_optimization/resources/package_loss/sar_ring_buffer_full.png)  
@@ -22,7 +22,7 @@ In this scenario, network data can not be stored into NIC fifo, then the package
 Let's locate this issue using below tools：  
 (1) netstat  
 Command: netstat -i  
-![netstat_fifo_full](https://github.com/Hankin-Liu/blogs/blob/master/performance_optimization/resources/package_loss/netstat_fifo_full.png)
+![netstat_fifo_full](https://github.com/Hankin-Liu/blogs/blob/master/performance_optimization/resources/package_loss/netstat_fifo_full.png)  
 (2) ifconfig  
 Command: ifconfig
 ![ifconfig_fifo_full](https://github.com/Hankin-Liu/blogs/blob/master/performance_optimization/resources/package_loss/ifconfig_fifo_full.png)  
@@ -39,7 +39,7 @@ Command: cat /proc/net/softnet_stat
 ![backlog_full](https://github.com/Hankin-Liu/blogs/blob/master/performance_optimization/resources/package_loss/backlog_full.png)  
 ### 2. socket buffers are full
 We talk about UDP's socket buffera are full, because TCP has congestion control.
-In this scenario, Linux kernel network stack can not put packages into socket buffers. Then packages will be dropped.
+In this scenario, Linux kernel network stack can not put packages into socket buffers. Then packages will be dropped.  
 Let's locate this issue using below tools：  
 (1) netstat  
 Command: netstat -s -u  
@@ -48,5 +48,12 @@ Command: netstat -s -u
 Command: sar -n UDP,UDP6 1  
 Note: This command can fetch the dropped udp package count per second which could not be delivered for reasons other than the lack of an application at the destination port.  
 ![sar_socket_buffer_full](https://github.com/Hankin-Liu/blogs/blob/master/performance_optimization/resources/package_loss/sar_socket_buffer_full.png)
+## more powerful tools
+If you need more issue details such as call stacks. The following tools are very useful.  
+(1) dropwatch  
+Command: dropwatch -l kas  
+         start  
+Note: This tool can show the kernel function name and address where drop packages.  
+![dropwatch](https://github.com/Hankin-Liu/blogs/blob/master/performance_optimization/resources/package_loss/dropwatch.png)  
 
 [\[Back\]](https://github.com/Hankin-Liu/hankin.github.io/blob/master/performance_optimization/performance_optimization.md)
