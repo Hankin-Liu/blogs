@@ -43,7 +43,7 @@ The first tool is valgrind, let us use it to profile our code which is shown abo
              callgrind.out.115774  test  test.cpp  
 **Step 3:** Use kcachegrind to open and analyze this profile file.  
         Instruction: kcachegrind  
-![valgrind+kcachegrind](https://github.com/Hankin-Liu/blogs/blob/master/performance_optimization/valgrind.png)  
+![valgrind+kcachegrind](https://github.com/Hankin-Liu/blogs/blob/master/performance_optimization/resources/profile/valgrind.png)  
 
 From the picture, we can see that func1 calls func2 and func3, the time consuming proportion of func2 is 74.82%, and the time consuming proportion of  func3 is 24.78%. So the func2 is the biggest performance bottleneck.
 
@@ -73,7 +73,7 @@ The second tool is Gperftools, let us use it to profile our code which is shown 
 
 ​             Instruction: kcachegrind 
 
-![gperftools+kcachegrind](https://github.com/Hankin-Liu/blogs/blob/master/performance_optimization/gperftools.png)  
+![gperftools+kcachegrind](https://github.com/Hankin-Liu/blogs/blob/master/performance_optimization/resources/profile/gperftools.png)  
 
 From the picture, we can see that func1 calls func2 and func3 and std::ostream::flush, the time consuming proportion of func2 is 22.52% + 51.52%, and the time consuming proportion of  func3 is 7.54% + 17.85%. So the func2 is the biggest performance bottleneck.
 
