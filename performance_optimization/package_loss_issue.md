@@ -36,7 +36,7 @@ Then packages go into network stack. After processing, kernel copies packages in
 In this scenario, Linux kernel(NIC driver) can not store packages into backlog buffer. Then packages will be dropped.  
 Let's locate this issue using below command:  
 Command: cat /proc/net/softnet_stat  
-![backlog_full](https://github.com/Hankin-Liu/blogs/blob/master/performance_optimization/backlog_full.png)  
+![backlog_full](https://github.com/Hankin-Liu/blogs/blob/master/performance_optimization/resources/package_loss/backlog_full.png)  
 ### 2. socket buffers are full
 We talk about UDP's socket buffera are full, because TCP has congestion control.
 In this scenario, Linux kernel network stack can not put packages into socket buffers. Then packages will be dropped.
