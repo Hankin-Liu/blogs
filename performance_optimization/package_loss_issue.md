@@ -58,6 +58,7 @@ Note: This tool can show the kernel function name and address where drop package
 (2) perf  
 Command: perf record -e 'skb:kfree_skb' -g -a  
          perf script  
+Note: skb:kfree_skb is a tracepoint which indicates package loss.  
 ![perf](https://github.com/Hankin-Liu/blogs/blob/master/performance_optimization/resources/package_loss/perf.png)  
 
 [\[Back\]](https://github.com/Hankin-Liu/hankin.github.io/blob/master/performance_optimization/performance_optimization.md)
